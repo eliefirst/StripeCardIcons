@@ -3,3 +3,4 @@
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
     'StripeCardIcons',
     __DIR__
+);
