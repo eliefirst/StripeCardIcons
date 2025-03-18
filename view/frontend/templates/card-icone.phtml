@@ -1,0 +1,19 @@
+<?php
+ /** @var \Magento\Framework\View\Element\Template $block */
+$icons = [
+    'visa' => 'visa.png',
+    'mastercard' => 'mastercard.png',
+    'amex' => 'amex.png',
+    'diners' => 'diners.png',
+    'discover' => 'discover.png',
+    'jcb' => 'jcb.png',
+    'unionpay' => 'unionpay.svg' // Format SVG pour UnionPay ];
+
+
+ $mediaUrl = $block->getViewFileUrl('Elie_StripeCardIcons::images/');
+ ?>
+    <div class="stripe-card-icons">
+    <?php foreach ($icons as $name => $file) : ?>
+        <img src="<?= $mediaUrl . $file ?>" alt="<?= ucfirst($name) ?>" class="stripe-card-icon" />
+    <?php endforeach; ?>
+    </div>
